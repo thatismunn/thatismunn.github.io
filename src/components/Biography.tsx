@@ -1,4 +1,53 @@
+import MyPhoto from '../img/3x4.png'
+
 function Biography() {
+  const profileArr: BiographySample[] = [
+    { key: "Gender", value: "Male" },
+    { key: "Status", value: "Single" },
+    { key: "Religion", value: "Islam" },
+    { key: "Hometown", value: "Makassar, South Sulawesi" },
+    { key: "Current City", value: "Makassar, South Sulawesi" },
+    { key: "Nationality", value: "Indonesia" },
+    { key: "Hobby", value: "Gaming, Writing, and Watching Movie" },
+    {
+      key: "Interest",
+      value: "Technology, Sports (Football & Badminton), Game, Cinematography, Economy (Crypto & Stocks)."
+    }
+  ]
+
+  const contactArr: BiographyContactSample[] = [
+    {
+      key: "E-Mail",
+      value: "ikramullahzx@gmail.com",
+      url: "mailto:ikramullahzx@gmail.com"
+    },
+    {
+      key: "GitHub",
+      value: "github://thatismunn",
+      url: "https://github.com/thatismunn"
+    },
+    {
+      key: "Facebook",
+      value: "Ikramullah Ikram",
+      url: "https://fb.me/ikram.sekai"
+    },
+    {
+      key: "Twitter",
+      value: "@ikr4mm_",
+      url: "https://twitter.com/ikr4mm_"
+    },
+    {
+      key: "Telegram",
+      value: "@ikr4_m",
+      url: "https://t.me/ikr4_m"
+    },
+    {
+      key: "LinkedIn",
+      value: "Ikramullah Ikram",
+      url: "https://www.linkedin.com/in/ikramullah-ikram"
+    }
+  ]
+
   return (
     <div className="p-5">
       <div className="grid grid-cols-6 h-max">
@@ -11,99 +60,37 @@ function Biography() {
           </div>
           <div className="w-auto mt-2">
             <span className="text-xl mb-1">Profile</span>
-            <div className="grid grid-cols-6">
-              <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
-                <p className="font-bold">Gender</p>
-              </div>
-              <div className="col-span-4 my-1"><p>Male</p></div>
-              <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
-                <p className="font-bold">Status</p>
-              </div>
-              <div className="col-span-4 my-1"><p>Single</p></div>
-              <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
-                <p className="font-bold">Religion</p>
-              </div>
-              <div className="col-span-4 my-1"><p>Islam</p></div>
-              <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
-                <p className="font-bold">Hometown</p>
-              </div>
-              <div className="col-span-4 my-1"><p>Makassar, South Sulawesi</p></div>
-              <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
-                <p className="font-bold">Current City</p>
-              </div>
-              <div className="col-span-4 my-1"><p>Makassar, South Sulawesi</p></div>
-              <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
-                <p className="font-bold">Nationality</p>
-              </div>
-              <div className="col-span-4 my-1"><p>Makassar</p></div>
-              <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
-                <p className="font-bold">Hobby</p>
-              </div>
-              <div className="col-span-4 my-1"><p>Gaming, Writing, and Watching Movie</p></div>
-              <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
-                <p className="font-bold">Interest</p>
-              </div>
-              <div className="col-span-4 my-1"><p>Technology, Sports (Football & Badminton), Game, Cinematography, Economy (Crypto & Stocks).</p></div>
-            </div>
-          </div>
-          <span className="text-xl mb-1">Contact</span>
-          <div className="grid grid-cols-6">
-            <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
-              <p className="font-bold">E-Mail</p>
-            </div>
-            <div className="col-span-4 my-1">
-              <p>
-                <a href="mailto:ikramullahzx@gmail.com">ikramullahzx@gmail.com</a>
-              </p>
-            </div>
-            <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
-              <p className="font-bold">GitHub</p>
-            </div>
-            <div className="col-span-4 my-1">
-              <p>
-                <a href="https://github.com/thatismunn">github://thatismunn</a>
-              </p>
-            </div>
-            <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
-              <p className="font-bold">Facebook</p>
-            </div>
-            <div className="col-span-4 my-1">
-              <p>
-                <a href="https://fb.me/ikram.sekai">Ikramullah Ikram</a>
-              </p>
-            </div>
-            <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
-             <p className="font-bold">Twitter</p>
-            </div>
-            <div className="col-span-4 my-1">
-              <p>
-                <a href="https://twitter.com/ikr4mm_">@ikr4mm_</a>
-              </p>
-            </div>
-            <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
-              <p className="font-bold">Telegram</p>
-            </div>
-            <div className="col-span-4 my-1">
-              <p>
-                <a href="https://t.me/ikr4_m">@ikr4_m</a>
-              </p>
-            </div>
-            <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
-              <p className="font-bold">LinkedIn</p>
-            </div>
-            <div className="col-span-4 my-1">
-              <p>
-                <a href="https://www.linkedin.com/in/ikramullah-ikram/">Ikramullah Ikram</a>
-              </p>
-            </div>
+            {
+              profileArr.map((v, i) => (
+                <div className="grid grid-cols-6" key={i}>
+                  <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
+                    <p className="font-bold">{v.key}</p>
+                  </div>
+                  <div className="col-span-4 my-1"><p>{v.value}</p></div>
+                </div>
+              ))
+            }
+            <span className="text-xl mb-1">Contact</span>
+            {
+              contactArr.map((v, i) => (
+                <div className="grid grid-cols-6" key={i}>
+                  <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
+                    <p className="font-bold">{v.key}</p>
+                  </div>
+                  <div className="col-span-4 my-1">
+                    <p>
+                      <a href={v.url} target="_blank">{v.value}</a>
+                    </p>
+                  </div>
+                </div>
+              ))
+            }
           </div>
         </div>
 
-        {/* Carousel Photo */}
-        <div className="col-span-2 flex hidden sm:block">
-          <p className="mx-auto text-center">
-            Ini rencananya foto, tapi gatau sapa yang mau ambil fotonya
-          </p>
+        {/* Photo */}
+        <div className="col-span-2 hidden sm:block">
+          <img src={MyPhoto} alt="MyPhoto" placeholder="This image was uploaded in 16 March 2022" />
         </div>
 
       </div>
