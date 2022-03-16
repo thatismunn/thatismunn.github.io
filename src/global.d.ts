@@ -10,3 +10,10 @@ interface BiographySample {
 interface BiographyContactSample extends BiographySample {
   url: string
 }
+
+interface EducationSample {
+  year: string[],
+  title: string,
+  description: string,
+  subdescription?: string
+}
