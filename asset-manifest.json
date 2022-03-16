@@ -1,10 +1,14 @@
 {
   "files": {
-    "main.js": "/static/js/main.a5e1b4ac.js",
+    "main.css": "/static/css/main.bb3f7819.css",
+    "main.js": "/static/js/main.496f9f49.js",
+    "static/media/munn_transparent.png": "/static/media/munn_transparent.705d5cc7e3965cfee42c.png",
     "index.html": "/index.html",
-    "main.a5e1b4ac.js.map": "/static/js/main.a5e1b4ac.js.map"
+    "main.bb3f7819.css.map": "/static/css/main.bb3f7819.css.map",
+    "main.496f9f49.js.map": "/static/js/main.496f9f49.js.map"
   },
   "entrypoints": [
-    "static/js/main.a5e1b4ac.js"
+    "static/css/main.bb3f7819.css",
+    "static/js/main.496f9f49.js"
   ]
 }
