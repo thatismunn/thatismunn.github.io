@@ -1,10 +1,13 @@
 import Header from './components/Header'
-import './scss/index.css'
+import Biography from './components/Biography'
+import './css/index.css'
 
 function App() {
   return (
-    <div className="App">
+    <div className="App max-w-4xl mx-auto pb-3">
       <Header />
+      <Biography />
+      <p className="py-10 text-5xl text-center">STILL IN DEVELOPMENT</p>
     </div>
   )
 }
