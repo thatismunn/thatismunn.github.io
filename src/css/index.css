@@ -1,4 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  font-family: monospace;
+  font-family: 'Roboto Mono', monospace;
   background-color: theme('colors.stone.200');
 }

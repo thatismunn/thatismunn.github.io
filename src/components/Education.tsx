@@ -58,10 +58,19 @@ function Education() {
     }
   ]
 
+  const mentoringArr: EducationSample[] = [
+    {
+      year: ["2021", "2021"],
+      title: "Indonesian Inter-Provincal Students Skill Competition",
+      description: "Web Engineering",
+      subdescription: "Mentor"
+    }
+  ]
+
   return (
-    <div className="pb-5">
+    <div className="pb-5 px-5 md:px-0">
       <p className="text-center text-xl">Education</p>
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
         {/* Formal Education */}
         <div>
@@ -96,6 +105,15 @@ function Education() {
         </div>
 
       </div>
+
+      {/* Mentoring */}
+      <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1 mt-5">
+        <p className="font-bold text-center mb-3">Mentoring</p>
+      </div>
+      <div className={`grid grid-cols-1 md:grid-cols-${mentoringArr.length % 3 === 0 ? 3 : 2}`}>
+        {printEducationArray(mentoringArr)}
+      </div>
+
     </div>
   )
 }

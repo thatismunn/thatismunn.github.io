@@ -1,7 +1,6 @@
 import Header from './components/Header'
 import Biography from './components/Biography'
 import Education from './components/Education'
-import './css/index.css'
 
 function App() {
   return (

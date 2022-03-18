@@ -89,8 +89,8 @@ function Biography() {
         </div>
 
         {/* Photo */}
-        <div className="col-span-2 hidden sm:block">
-          <img src={MyPhoto} alt="MyPhoto" placeholder="This image was uploaded in 16 March 2022" />
+        <div className="col-span-2 hidden sm:flex">
+          <img className="rounded-full m-auto" src={MyPhoto} alt="MyPhoto" placeholder="This image was uploaded in 16 March 2022" />
         </div>
 
       </div>
