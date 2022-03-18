@@ -2,6 +2,7 @@ import Header from './components/Header'
 import Biography from './components/Biography'
 import Education from './components/Education'
 import Skills from './components/Skills'
+import Work from './components/Works'
 
 function App() {
   return (
@@ -10,7 +11,11 @@ function App() {
       <Biography />
       <Education />
       <Skills />
-      <p className="py-10 text-5xl text-center">STILL IN DEVELOPMENT</p>
+      <Work />
+      <div className="border-t border-stone-900 pt-3 mb-3 flex justify-between items-center">
+        <p>(C) Ikramullah - All rights reserved.</p>
+        <p>Made with ❤️.</p>
+      </div>
     </div>
   )
 }

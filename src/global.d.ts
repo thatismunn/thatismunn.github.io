@@ -17,3 +17,11 @@ interface EducationSample {
   description: string,
   subdescription?: string
 }
+
+interface WorksSample {
+  title: string,
+  position: string,
+  src: string,
+  url: string,
+  alt?: string
+}

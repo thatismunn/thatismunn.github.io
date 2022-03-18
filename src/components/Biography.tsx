@@ -3,7 +3,6 @@ import MyPhoto from '../img/3x4.png'
 function Biography() {
   const profileArr: BiographySample[] = [
     { key: "Gender", value: "Male" },
-    { key: "Status", value: "Single" },
     { key: "Religion", value: "Islam" },
     { key: "Hometown", value: "Makassar, South Sulawesi" },
     { key: "Current City", value: "Makassar, South Sulawesi" },
@@ -11,7 +10,7 @@ function Biography() {
     { key: "Hobby", value: "Gaming, Writing, and Watching Movie" },
     {
       key: "Interest",
-      value: "Technology, Sports (Football & Badminton), Game, Cinematography, Economy (Crypto & Stocks)."
+      value: "Technology, Sports, Game, Cinematography, Economy."
     }
   ]
 
@@ -25,6 +24,11 @@ function Biography() {
       key: "GitHub",
       value: "github://thatismunn",
       url: "https://github.com/thatismunn"
+    },
+    {
+      key: "Sourcehut",
+      value: "~munn",
+      url: "https://sr.ht/~munn"
     },
     {
       key: "Facebook",
@@ -45,7 +49,17 @@ function Biography() {
       key: "LinkedIn",
       value: "Ikramullah Ikram",
       url: "https://www.linkedin.com/in/ikramullah-ikram"
-    }
+    },
+    {
+      key: "GPG Keys",
+      value: "Click here.",
+      url: "https://meta.sr.ht/~munn.pgp"
+    },
+    {
+      key: "SSH Keys",
+      value: "Click here.",
+      url: "https://meta.sr.ht/~munn.keys"
+    },
   ]
 
   return (
