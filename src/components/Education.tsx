@@ -74,7 +74,7 @@ function Education() {
 
         {/* Formal Education */}
         <div>
-          <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
+          <div className="bg-stone-300 px-1 mx-4 my-1">
             <p className="font-bold text-center mb-3">Formal Education</p>
           </div>
           {printEducationArray(formalEducationArr)}
@@ -82,7 +82,7 @@ function Education() {
 
         {/* Informal Education */}
         <div>
-          <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
+          <div className="bg-stone-300 px-1 mx-4 my-1">
             <p className="font-bold text-center mb-3">Informal Education</p>
           </div>
           {printEducationArray(informalEducationArr)}
@@ -90,7 +90,7 @@ function Education() {
 
         {/* Experience */}
         <div>
-          <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
+          <div className="bg-stone-300 px-1 mx-4 my-1">
             <p className="font-bold text-center mb-3">Experience</p>
           </div>
           {printEducationArray(experienceArr)}
@@ -98,22 +98,21 @@ function Education() {
 
         {/* Awards */}
         <div>
-          <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
+          <div className="bg-stone-300 px-1 mx-4 my-1">
             <p className="font-bold text-center mb-3">Awards</p>
           </div>
           {printEducationArray(awardsArr)}
         </div>
 
-      </div>
+        {/* Mentoring */}
+        <div className="md:col-span-2">
+          <div className="bg-stone-300 px-1 mx-4 my-1">
+            <p className="font-bold text-center mb-3">Mentoring</p>
+          </div>
+          {printEducationArray(mentoringArr)}
+        </div>
 
-      {/* Mentoring */}
-      <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1 mt-5">
-        <p className="font-bold text-center mb-3">Mentoring</p>
       </div>
-      <div className={`grid grid-cols-1 md:grid-cols-${mentoringArr.length % 3 === 0 ? 3 : 2}`}>
-        {printEducationArray(mentoringArr)}
-      </div>
-
     </div>
   )
 }
