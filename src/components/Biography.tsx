@@ -1,6 +1,8 @@
 import MyPhoto from '../img/3x4.png'
+import { useGlobalState } from '../GlobalState'
 
 function Biography() {
+  const { state } = useGlobalState()
   const profileArr: BiographySample[] = [
     { key: "Gender", value: "Male" },
     { key: "Religion", value: "Islam" },
@@ -53,12 +55,14 @@ function Biography() {
     {
       key: "GPG Keys",
       value: "Click here.",
-      url: "https://meta.sr.ht/~munn.pgp"
+      url: "https://meta.sr.ht/~munn.pgp",
+      hiddenPrint: true
     },
     {
       key: "SSH Keys",
       value: "Click here.",
-      url: "https://meta.sr.ht/~munn.keys"
+      url: "https://meta.sr.ht/~munn.keys",
+      hiddenPrint: true
     },
   ]
 
@@ -87,7 +91,7 @@ function Biography() {
             <span className="text-xl mb-1">Contact</span>
             {
               contactArr.map((v, i) => (
-                <div className="grid grid-cols-6" key={i}>
+                <div className={`grid grid-cols-6 ${state.webMode && v.hiddenPrint && "hidden"}`} key={i}>
                   <div className="col-span-2 bg-stone-300 px-1 mx-4 my-1">
                     <p className="font-bold">{v.key}</p>
                   </div>

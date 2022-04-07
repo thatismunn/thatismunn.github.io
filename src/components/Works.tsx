@@ -1,7 +1,10 @@
 import KadinSulsel from '../img/works_kadinsulsel.png'
 import MMSKadinSulsel from '../img/works_mmskadinsulsel.png'
+import { useGlobalState } from '../GlobalState'
 
 function Work() {
+  const { state } = useGlobalState()
+
   function generateSocialifySVG(username: string, repo: string): string {
     return `https://socialify.git.ci/${username}/${repo}/image?description=1&forks=1&issues=1&pulls=1&stargazers=1&theme=Light`
   }
@@ -48,7 +51,7 @@ function Work() {
   ]
 
   return (
-    <div className="pb-5 px-5 md:px-0">
+    <div className={`pb-5 px-5 md:px-0 ${state.webMode && "hidden"}`}>
       <p className="text-center text-xl">Works</p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {

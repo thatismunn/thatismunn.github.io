@@ -8,7 +8,8 @@ interface BiographySample {
 }
 
 interface BiographyContactSample extends BiographySample {
-  url: string
+  url: string,
+  hiddenPrint?: boolean
 }
 
 interface EducationSample {
