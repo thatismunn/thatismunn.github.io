@@ -1,6 +1,6 @@
 import KadinSulsel from '../img/works_kadinsulsel.png'
 import MMSKadinSulsel from '../img/works_mmskadinsulsel.png'
-import { useGlobalState } from '../GlobalState'
+import { useGlobalState } from '../../GlobalState'
 
 function Work() {
   const { state } = useGlobalState()
@@ -57,7 +57,7 @@ function Work() {
         {
           renderArr.map((v, i) => (
             <div key={i}>
-              <a href={v.url} target="_blank">
+              <a href={v.url} target="_blank" rel="noreferrer">
                 <p className="text-lg text-center mb-2">{`${v.title} (${v.position})`}</p>
               </a>
               <img src={v.src} alt={!v.alt ? v.src : v.alt} />

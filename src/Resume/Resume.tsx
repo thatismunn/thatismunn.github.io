@@ -1,4 +1,4 @@
-import { GlobalStateProvider } from './GlobalState'
+import { GlobalStateProvider } from '../GlobalState'
 import Header from './components/Header'
 import Biography from './components/Biography'
 import Education from './components/Education'

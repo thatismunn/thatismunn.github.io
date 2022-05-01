@@ -1,11 +1,18 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ReactDOM from 'react-dom'
-import App from './App'
-import './css/index.css'
+import Resume from './Resume/Resume'
+import Porto from './Porto/Porto'
+import './index.css'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Porto />} />
+        <Route path='resume' element={<Resume />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 )

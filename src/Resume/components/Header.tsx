@@ -1,5 +1,5 @@
 import Logo from '../img/munn_transparent.png'
-import { useGlobalState } from '../GlobalState'
+import { useGlobalState } from '../../GlobalState'
 
 function Header() {
   const { state, setState } = useGlobalState()

@@ -1,5 +1,5 @@
 import MyPhoto from '../img/3x4.png'
-import { useGlobalState } from '../GlobalState'
+import { useGlobalState } from '../../GlobalState'
 
 function Biography() {
   const { state } = useGlobalState()
@@ -97,7 +97,7 @@ function Biography() {
                   </div>
                   <div className="col-span-4 my-1">
                     <p>
-                      <a href={v.url} target="_blank">{v.value}</a>
+                      <a href={v.url} target="_blank" rel='noreferrer'>{v.value}</a>
                     </p>
                   </div>
                 </div>
