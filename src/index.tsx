@@ -4,9 +4,6 @@ import ReactDOM from 'react-dom'
 import Resume from './Resume/Resume'
 import Porto from './Porto/Porto'
 import './index.css'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
 
 ReactDOM.render(
   <React.StrictMode>
