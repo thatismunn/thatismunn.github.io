@@ -53,12 +53,9 @@ function HeroBanner() {
             <div className="text-5xl text-primary font-bold">
               <p className='py-3'>
                 <span className="text-secondary">
-                  {'<b>'}
+                  {'$ '}
                 </span>
-                <ReactTypical steps={['Hello!', 6000, 'Hello world!', 10000]} loop={Infinity} wrapper='span' />
-                <span className="text-secondary">
-                  {'</b>'}
-                </span>
+                <ReactTypical steps={['echo "Hello!"', 6000, 'echo "Hello world!"', 10000]} loop={Infinity} wrapper='span' />
               </p>
               <p className='py-3'>
                 I'm <span className="text-secondary">Ikram</span>, a developer!
@@ -69,7 +66,7 @@ function HeroBanner() {
                 </button>
               </Link>
             </div>
-            <p className='text-xl py-4 text-primary'>Scroll down!</p>
+            <p className='text-xl py-4 text-primary'>Scroll down for more information!</p>
           </div>
         </div>
 
