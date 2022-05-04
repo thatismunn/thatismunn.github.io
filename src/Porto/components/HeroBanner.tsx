@@ -12,7 +12,7 @@ function HeroBanner() {
             <div className="text-5xl text-primary font-bold animate__animated animate__fadeInLeft animate__faster" data-aos='fade-up'>
               <p className='py-3'>
                 <span className="text-secondary">
-                  {'$ '}
+                  $&nbsp;
                 </span>
                 <ReactTypical steps={['echo "Hello!"', 6000, 'echo "Hello world!"', 10000]} loop={Infinity} wrapper='span' />
               </p>
@@ -42,9 +42,31 @@ function HeroBanner() {
       </div>
 
       {/* Phone/Tablet Layout */}
-      <div className="grid-cols-2 lg:hidden grid">
-        <div className="col-span-1">Foo</div>
-        <div className="col-span-1">Bar</div>
+      <div className="grid-cols-1 lg:hidden grid h-screen">
+        <div className="col-span-1 flex">
+          <div className="m-auto text-3xl text-primary pb-96 text-center animate__animated animate__fadeInDown animate__faster z-10">
+            <p className='py-1'>
+              <span className="text-secondary">
+                $&nbsp;
+              </span>
+              <ReactTypical steps={['echo "Hello!"', 6000, 'echo "Hello world!"', 10000]} loop={Infinity} wrapper='span' />
+            </p>
+            <p className="py-1">
+              I'm <span className="text-secondary">Ikram</span>, a developer!
+            </p>
+            <Link to='/resume'>
+              <button className="py-1 mt-5 btn-outline btn btn-primary btn-wide btn-sm">
+                Resume
+              </button>
+            </Link>
+            <p className='py-3 text-sm'>
+              Scroll Down!
+            </p>
+          </div>
+        </div>
+        <div className="col-span-1 flex">
+          <img src={HeroChara} alt='herochara' className='fixed bottom-0 h-2/3 left-1/2 translate-x-[-50%]' />
+        </div>
       </div>
     </>
   )

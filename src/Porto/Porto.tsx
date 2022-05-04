@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Pagination, Mousewheel, Scrollbar } from 'swiper'
@@ -57,6 +58,14 @@ function Porto() {
     }
   ]
 
+  const titleNavbar = [
+    'Ikramullah',
+    'About Me',
+    'Biography',
+    'Project',
+    'Skills',
+    'Contact'
+  ]
 
   // Loading Screen
   useEffect(() => {
@@ -67,15 +76,6 @@ function Porto() {
       window.removeEventListener('load', uncheckLoading)
     }
   }, [])
-
-  const titleNavbar = [
-    'Ikramullah',
-    'About Me',
-    'Biography',
-    'Project',
-    'Skills',
-    'Contact'
-  ]
 
   const whenChangePage = (swiper: SwiperCore) => {
     setChangingPage(!changingPage)
@@ -96,17 +96,27 @@ function Porto() {
       <div id="content" className={isLoading ? 'none' : 'block'} style={{display: isLoading ? 'none' : 'block'}}>
         <header className="navbar fixed w-full top-0 z-50" style={{backgroundColor: 'transparent'}}>
           {/* Navbar Start */}
-          <div className="lg:flex hidden navbar-start ml-10">
+          <div className="navbar-start ml-10">
             <p className={`btn btn-ghost normal-case text-xl ${!changingPage ? 'flex': 'hidden'}`}>
               {titleNavbar[page]}
             </p>
           </div>
 
           {/* Navbar End */}
-          <div className="lg:flex hidden navbar-end mr-10">
-            <button className="btn btn-ghost btn-circle">
-              <FontAwesomeIcon icon={faBars} />
-            </button>
+          <div className="navbar-end mr-10">
+            <div className="dropdown dropdown-end">
+              <button className="btn btn-ghost btn-circle" tabIndex={0}>
+                <FontAwesomeIcon icon={faBars} />
+              </button>
+              <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                <li>
+                  <Link to='/'>Homepage</Link>
+                </li>
+                <li>
+                  <Link to='/resume'>Portfolio</Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </header>
 
@@ -121,7 +131,6 @@ function Porto() {
           onSlideChangeTransitionStart={whenChangePage}
           onSlideChangeTransitionEnd={afterChangePage}
         >
-          <SwiperSlide children={<HeroBanner />} />
           <SwiperSlide children={<HeroBanner />} />
         </Swiper>
       </div>

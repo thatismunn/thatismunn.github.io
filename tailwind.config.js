@@ -1,7 +1,14 @@
 module.exports = {
   content: ['./src/**/*.{html,js,jsx,ts,tsx}'],
   theme: {
-    extend: {}
+    extend: {},
+    backgroundSize: {
+      'auto': 'auto',
+      'cover': 'cover',
+      'contain': 'contain',
+      '50%': '50%',
+      '75%': '75%',
+    }
   },
   plugins: [require('daisyui')],
   daisyui: {
