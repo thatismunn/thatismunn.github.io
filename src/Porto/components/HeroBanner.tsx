@@ -2,14 +2,14 @@ import HeroChara from '../img/mul2TR.png'
 import { ReactTypical } from '@deadcoder0904/react-typical'
 import { Link } from 'react-router-dom'
 
-function HeroBanner() {
-  return (
+function HeroBanner({active}: {active: boolean}) {
+  const render = () => (
     <>
       {/* Desktop Layout */}
       <div className='grid-cols-2 lg:grid hidden h-screen'>
         <div className="col-span-1 flex">
-          <div className="my-auto mx-28">
-            <div className="text-5xl text-primary font-bold animate__animated animate__fadeInLeft animate__faster" data-aos='fade-up'>
+          <div className="my-auto mx-32">
+            <div className='text-5xl text-primary font-bold animate__animated animate__fadeInLeft animate__fast'>
               <p className='py-3'>
                 <span className="text-secondary">
                   $&nbsp;
@@ -65,11 +65,13 @@ function HeroBanner() {
           </div>
         </div>
         <div className="col-span-1 flex">
-          <img src={HeroChara} alt='herochara' className='fixed bottom-0 h-2/3 left-1/2 translate-x-[-50%]' />
+          <img src={HeroChara} alt='herochara' className='fixed bottom-0 h-2/3 left-1/2 translate-x-[-50%] animate__animated animate__fadeIn animate__faster' />
         </div>
       </div>
     </>
   )
+
+  return (<>{active && render()}</>)
 }
 
 export default HeroBanner

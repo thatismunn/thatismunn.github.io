@@ -20,6 +20,7 @@ import 'swiper/css/effect-fade'
 import 'animate.css'
 
 import HeroBanner from './components/HeroBanner'
+import AboutMe from './components/AboutMe'
 
 function Porto() {
   const [isLoading, setIsLoading] = useState(true)
@@ -71,6 +72,9 @@ function Porto() {
   useEffect(() => {
     const uncheckLoading = () => setIsLoading(false)
     window.addEventListener('load', uncheckLoading)
+    
+    // Double execute, soalnya ngebug untuk loadingnya
+    uncheckLoading()
 
     return () => {
       window.removeEventListener('load', uncheckLoading)
@@ -85,6 +89,20 @@ function Porto() {
     setPage(swiper.realIndex)
     setChangingPage(!changingPage)
   }
+
+  const renderSNS = () => (
+    <>
+      {
+        snsList.map((v, i) => (
+          <a href={v.url} title={v.hover} rel='noreferrer' target='_blank' key={i}>
+            <button className="btn btn-ghost normal-case">
+              <FontAwesomeIcon icon={v.icon} size='1x' />
+            </button>
+          </a>
+        ))
+      }
+    </>
+  )
 
   return (
     <div className="porto">
@@ -131,7 +149,8 @@ function Porto() {
           onSlideChangeTransitionStart={whenChangePage}
           onSlideChangeTransitionEnd={afterChangePage}
         >
-          <SwiperSlide children={<HeroBanner />} />
+          <SwiperSlide children={<HeroBanner active={page === 0} />} />
+          <SwiperSlide children={<AboutMe active={page === 1} />} />
         </Swiper>
       </div>
 
@@ -144,17 +163,16 @@ function Porto() {
           </p>
         </div>
 
+        {/* Navbar Center */}
+        <div className="lg:hidden flex navbar-center w-screen">
+          <div className="mx-auto">
+            {renderSNS()}
+          </div>
+        </div>
+
         {/* Navbar End */}
         <div className="lg:flex hidden navbar-end mr-10">
-          {
-            snsList.map((v, i) => (
-              <a href={v.url} title={v.hover} rel='noreferrer' target='_blank' key={i}>
-                <button className="btn btn-ghost normal-case">
-                  <FontAwesomeIcon icon={v.icon} size='1x' />
-                </button>
-              </a>
-            ))
-          }
+          {renderSNS()}
         </div>
       </footer>
     </div>
