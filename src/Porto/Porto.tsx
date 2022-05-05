@@ -21,6 +21,7 @@ import 'animate.css'
 
 import HeroBanner from './components/HeroBanner'
 import AboutMe from './components/AboutMe'
+import Biography from './components/Biography'
 
 function Porto() {
   const [isLoading, setIsLoading] = useState(true)
@@ -148,6 +149,7 @@ function Porto() {
         >
           <SwiperSlide children={<HeroBanner active={page === 0} />} />
           <SwiperSlide children={<AboutMe active={page === 1} />} />
+          <SwiperSlide children={<Biography active={page === 2} />} />
         </Swiper>
       </div>
 
