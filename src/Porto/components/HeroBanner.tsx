@@ -8,8 +8,8 @@ function HeroBanner({active}: {active: boolean}) {
       {/* Desktop Layout */}
       <div className='grid-cols-2 lg:grid hidden h-screen'>
         <div className="col-span-1 flex">
-          <div className="my-auto mx-32">
-            <div className='text-5xl text-primary font-bold animate__animated animate__fadeInLeft animate__fast'>
+          <div className="my-auto ml-36">
+            <div className='text-6xl text-primary font-bold animate__animated animate__fadeInLeft animate__fast'>
               <p className='py-3'>
                 <span className="text-secondary">
                   $&nbsp;
@@ -19,7 +19,7 @@ function HeroBanner({active}: {active: boolean}) {
               <p className='py-3'>
                 I'm <span className="text-secondary">Ikram</span>, a developer!
               </p>
-              <Link to='/resume'>
+              <Link to='/resume' target='_blank' rel='noreferrer'>
                 <button className="py-3 mt-5 btn-outline btn btn-primary btn-wide">
                   Resume
                 </button>

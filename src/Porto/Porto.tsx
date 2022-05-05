@@ -72,9 +72,6 @@ function Porto() {
   useEffect(() => {
     const uncheckLoading = () => setIsLoading(false)
     window.addEventListener('load', uncheckLoading)
-    
-    // Double execute, soalnya ngebug untuk loadingnya
-    uncheckLoading()
 
     return () => {
       window.removeEventListener('load', uncheckLoading)
@@ -115,7 +112,7 @@ function Porto() {
         <header className="navbar fixed w-full top-0 z-50" style={{backgroundColor: 'transparent'}}>
           {/* Navbar Start */}
           <div className="navbar-start ml-10">
-            <p className={`btn btn-ghost normal-case text-xl ${!changingPage ? 'flex': 'hidden'}`}>
+            <p id='navbar-title' className={`btn btn-ghost normal-case text-xl ${!changingPage ? 'flex': 'hidden'}`}>
               {titleNavbar[page]}
             </p>
           </div>
@@ -128,10 +125,10 @@ function Porto() {
               </button>
               <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                 <li>
-                  <Link to='/'>Homepage</Link>
+                  <Link to='/' target='_blank' rel='noreferrer'>Homepage</Link>
                 </li>
                 <li>
-                  <Link to='/resume'>Portfolio</Link>
+                  <Link to='/resume' target='_blank' rel='noreferrer'>Portfolio</Link>
                 </li>
               </ul>
             </div>
