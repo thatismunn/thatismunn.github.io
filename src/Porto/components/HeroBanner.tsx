@@ -44,7 +44,7 @@ function HeroBanner({active}: {active: boolean}) {
       {/* Phone/Tablet Layout */}
       <div className="grid-cols-1 lg:hidden grid h-screen">
         <div className="col-span-1 flex">
-          <div className="m-auto text-3xl text-primary pb-96 text-center animate__animated animate__fadeInDown animate__faster z-10">
+          <div className="m-auto md:text-3xl text-xl text-primary lg:pb-96 pb-80 text-center animate__animated animate__fadeInDown animate__faster z-10">
             <p className='py-1'>
               <span className="text-secondary">
                 $&nbsp;
@@ -55,13 +55,10 @@ function HeroBanner({active}: {active: boolean}) {
               I'm <span className="text-secondary">Ikram</span>, a developer!
             </p>
             <Link to='/resume'>
-              <button className="py-1 mt-5 btn-outline btn btn-primary btn-wide btn-sm">
+              <button className="py-1 mt-5 btn-outline btn btn-primary btn-wide md:btn-md btn-sm">
                 Resume
               </button>
             </Link>
-            <p className='py-3 text-sm'>
-              Scroll Down!
-            </p>
           </div>
         </div>
         <div className="col-span-1 flex">

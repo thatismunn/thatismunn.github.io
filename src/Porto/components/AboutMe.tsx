@@ -48,15 +48,15 @@ function AboutMe({active}: {active: boolean}) {
 
       {/* Mobile */}
       <div className='lg:hidden h-screen bg-cover bg-center animate__animated animate__fadeIn animate__faster' style={{backgroundImage: `url(${FullPict})`}}>
-        <div className="bg-base-100/80 backdrop-blur-sm h-full flex">
+        <div className="bg-base-100/90 backdrop-blur-sm h-full flex">
           <div className="my-auto mx-8 text-primary">
-            <p className='text-xl font-bold pb-3 underline decoration-1 underline-offset-[0.5rem] text-center animate__animated animate__fadeInDown animate__faster'>
+            <p className='md:text-5xl text-xl font-bold pb-3 underline decoration-1 underline-offset-[0.5rem] text-center animate__animated animate__fadeInDown animate__faster'>
               About <span className="text-secondary">Me</span>
             </p>
-            <p className="py-3 text-lg text-center animate__animated animate__fadeInRight animate__faster">
+            <p className="py-3 md:text-2xl text-lg text-center animate__animated animate__zoomIn animate__faster">
               An IT undergraduate student who is trying to establish himself to be able to compete in today's technological era. Have a desire to become a teacher in the future and develop technology both nationally and internationally.
             </p>
-            <div className="pt-2 animate__animated animate__fadeInUp animate__faster">
+            <div className="pt-2 md:text-xl animate__animated animate__fadeInUp animate__faster">
               {
                 data.map((v, i) => (
                   <div className="grid grid-cols-4 gap-10" key={i}>

@@ -93,7 +93,7 @@ function Porto() {
       {
         snsList.map((v, i) => (
           <a href={v.url} title={v.hover} rel='noreferrer' target='_blank' key={i}>
-            <button className="btn btn-ghost normal-case">
+            <button className="btn btn-ghost normal-case md:btn-md btn-sm">
               <FontAwesomeIcon icon={v.icon} size='1x' />
             </button>
           </a>
@@ -163,9 +163,10 @@ function Porto() {
         </div>
 
         {/* Navbar Center */}
-        <div className="lg:hidden flex navbar-center w-screen">
+        <div className="lg:hidden flex navbar-center w-full">
           <div className="mx-auto">
             {renderSNS()}
+            <p className='text-center md:text-base text-sm pb-2'>&copy; 2022-{new Date().getFullYear()}, All rights reserved.</p>
           </div>
         </div>
 
