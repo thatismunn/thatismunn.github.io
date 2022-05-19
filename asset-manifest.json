@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.a503cf63.css",
-    "main.js": "/static/js/main.c243e80c.js",
+    "main.css": "/static/css/main.a4d17489.css",
+    "main.js": "/static/js/main.e8254ef5.js",
     "static/media/works_kadinsulsel.png": "/static/media/works_kadinsulsel.c2bc06625cdc28ee15b6.png",
     "static/media/3x4.png": "/static/media/3x4.d545a93e3192141f58a2.png",
     "static/media/works_mmskadinsulsel.png": "/static/media/works_mmskadinsulsel.17eaee5437b0fff48b39.png",
     "static/media/munn_transparent.png": "/static/media/munn_transparent.705d5cc7e3965cfee42c.png",
+    "static/media/biographyBG.webp": "/static/media/biographyBG.d1a7454e50d99f6539a9.webp",
     "static/media/loading.gif": "/static/media/loading.45df2d82dca079e9214f.gif",
     "static/media/mul2.png": "/static/media/mul2.b5472582964c395e1299.png",
     "static/media/mul2TR.png": "/static/media/mul2TR.537e09e1b35da08245ed.png",
     "index.html": "/index.html",
-    "main.a503cf63.css.map": "/static/css/main.a503cf63.css.map",
-    "main.c243e80c.js.map": "/static/js/main.c243e80c.js.map"
+    "main.a4d17489.css.map": "/static/css/main.a4d17489.css.map",
+    "main.e8254ef5.js.map": "/static/js/main.e8254ef5.js.map"
   },
   "entrypoints": [
-    "static/css/main.a503cf63.css",
-    "static/js/main.c243e80c.js"
+    "static/css/main.a4d17489.css",
+    "static/js/main.e8254ef5.js"
   ]
 }
