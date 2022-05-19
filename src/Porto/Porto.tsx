@@ -64,7 +64,7 @@ function Porto() {
     'Ikramullah',
     'About Me',
     'Biography',
-    'Project',
+    'Project & Experience',
     'Skills',
     'Contact'
   ]
@@ -147,9 +147,9 @@ function Porto() {
           onSlideChangeTransitionStart={whenChangePage}
           onSlideChangeTransitionEnd={afterChangePage}
         >
-          <SwiperSlide children={<HeroBanner active={page === 0} />} />
-          <SwiperSlide children={<AboutMe active={page === 1} />} />
-          <SwiperSlide children={<Biography active={page === 2} />} />
+          <SwiperSlide children={<HeroBanner active={page === 0 || isLoading} />} />
+          <SwiperSlide children={<AboutMe active={page === 1 || isLoading} />} />
+          <SwiperSlide children={<Biography active={page === 2 || isLoading} />} />
         </Swiper>
       </div>
 
