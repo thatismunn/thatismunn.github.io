@@ -3,10 +3,10 @@ function Education() {
     return data.map((v, i) => (
       <div className="py-1" key={i}>
         <div className="w-auto">
-          <p className="bg-stone-300 pr-8 pl-2 w-max">{v.year[0] === v.year[1] ? v.year[0] : v.year.join("-")}</p>
+          <p className="bg-stone-300 pr-8 pl-2 w-max">{v.year[0] === v.year[1] ? v.year[0] : v.year.join(" - ")}</p>
           <p className="font-bold">{v.title}</p>
           <p>{v.description}</p>
-          {!v.subdescription ? null : <p>{v.subdescription}</p>}
+          {!v.subdescription ? null : <p className="text-sm pl-5">{v.subdescription}</p>}
         </div>
       </div>
     ))
@@ -38,14 +38,16 @@ function Education() {
 
   const experienceArr: EducationSample[] = [
     {
-      year: ["2018", "current"],
+      year: ["July 2020", "current"],
       title: "Backend Developer (Volunteer)",
-      description: "Media Formasi"
+      description: "Media Formasi",
+      subdescription: "Working on maintain database and healthy checking website."
     },
     {
-      year: ["2020", "current"],
-      title: "Senior Software Engineer",
-      description: "PT. Kreasi Virtual Phoenix"
+      year: ["October 2020", "current"],
+      title: "Software Engineer (Self-employee)",
+      description: "Kreasi Virtual Phoenix",
+      subdescription: "Deploying & developing website, maintain server."
     }
   ]
 
